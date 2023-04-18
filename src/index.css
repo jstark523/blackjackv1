@@ -5,9 +5,54 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://i.pinimg.com/736x/fa/48/1d/fa481d42206bcba931b37f82982c7752.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 5px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.player-1 {
+  top: 85%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+}
+
+.player-2 {
+  top: 85%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.player-3 {
+  top: 40%;
+  left: 3.6%;
+  transform: translate(-50%, -50%);
+}
+
+.player-4 {
+  top: 40%;
+  left: 96.4%;
+  transform: translate(-50%, -50%);
+}
+
+.player-5 {
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.player-6 {
+  top: 97%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ .player img {
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 50%;
+} 

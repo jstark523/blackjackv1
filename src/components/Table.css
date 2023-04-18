@@ -1,0 +1,47 @@
+.table {
+  background-image: url("https://media.istockphoto.com/id/1218355494/vector/poker-table-background-in-green-color.jpg?s=170667a&w=0&k=20&c=kPTTaQdI5VQT-uXn4bWD7yIcCuotlYZK60uWh0EF1Dg=");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 10px solid brown;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  margin: 0 auto;
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.playerCard-1{
+  position: absolute;
+  bottom: 205%;
+  right: 107%;
+}
+.playerCard-2{
+  position: absolute;
+  bottom: 205%;
+  right: 107%;
+}
+.playerCard-3{
+  position: absolute;
+  bottom: 200%;
+  right: 80%;
+}
+.playerCard-4{
+  position: absolute;
+  bottom: 200%;
+  right: 230%;
+}
+.playerCard-5{
+  position: absolute;
+  bottom: -10%;
+  right: 106%;
+}
+.playerCard-6{
+  position: absolute;
+  bottom: 200%;
+  right: 106%;
+}

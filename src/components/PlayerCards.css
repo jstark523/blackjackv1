@@ -1,0 +1,9 @@
+#player-cards {
+  position: absolute;
+  display: flex;
+  left: 70%;
+  flex-direction: row; /* Display images horizontally */
+  align-items: flex-start; /* Prevent other elements from being pushed down */
+  gap: 10px;
+}
+
