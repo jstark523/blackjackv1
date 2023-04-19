@@ -37,3 +37,11 @@ export const getCurrentCards = () => {
 export const postUserName = (name) => {
   return axios.post(`${baseUrl}/stats/newName`, name);
 };
+
+export const postTurn = (turnNum) => {
+  return axios.post(`${baseUrl}/deck/turn`, turnNum, {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+};

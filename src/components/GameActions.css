@@ -1,9 +1,115 @@
 .stand{
-
+    border-radius: 50%;
+    position: absolute;
+    width: 103px;
+    height: 103px;
+    background-color: #FFD700; 
+    color: #000000; 
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    text-align: center;
+    top: 76%;
+    left: 35%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    transition: all 0.3s ease-in-out; 
 }
+
+.stand-off{
+    border-radius: 50%;
+    position: absolute;
+    width: 103px;
+    height: 103px;
+    background-color: #808080; 
+    color: #000000; 
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    text-align: center;
+    top: 76%;
+    left: 35%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    transition: all 0.3s ease-in-out; 
+}
+
+
+.stand:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); 
+  }
+  
+.stand:active {
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7); 
+}
+
 .hit{
-
+    border-radius: 50%;
+    position: absolute;
+    width: 103px;
+    height: 103px;
+    background-color: #960018; 
+    color: #000000; 
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    text-align: center;
+    top: 76%;
+    left: 60%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    transition: all 0.3s ease-in-out; 
 }
-.bet{
-    
+
+.hit-off{
+    border-radius: 50%;
+    position: absolute;
+    width: 103px;
+    height: 103px;
+    background-color: #808080; 
+    color: #000000; 
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    text-align: center;
+    top: 76%;
+    left: 60%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    transition: all 0.3s ease-in-out; 
+}
+
+.hit:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); 
+  }
+  
+.hit:active {
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7); 
+}
+
+.deal{
+    border-radius: 50%;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to bottom, #9B5DE5, #D77AAB);
+    color: #000000; 
+    font-size: 28px;
+    font-weight: bold;
+    padding: 12px 24px;
+    text-align: center;
+    top: 40%;
+    left: 45%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    transition: all 0.3s ease-in-out; 
+}
+
+.deal:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); 
+  }
+  
+.deal:active {
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7); 
 }

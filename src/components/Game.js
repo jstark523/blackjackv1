@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { newDeck, getDeck, dealCard, updatePlayerCard, clearCards, getCurrentCards } from '../api/axiosConfig';
+import { newDeck, getDeck, dealCard, updatePlayerCard, clearCards, getCurrentCards, postTurn } from '../api/axiosConfig';
 import './Game.css'
 import Table from './Table';
 import GameActions from './GameActions';
@@ -34,6 +34,25 @@ const Game = ({ players }) => {
     }
   }, [deckId]);
 
+  useEffect(() => {
+    const specificPlayerCards = playerCards.filter(cardObj => cardObj.playerIndex === players[turnNum - 1].playerIndex);
+    const cardTotal = specificPlayerCards.reduce((acc, cardObj)=>{
+        return acc + cardObj.card.val;
+    },0);
+    console.log(cardTotal);
+    if(cardTotal >= 21){
+        if(turnNum === 6){
+            setTurnNum(1);
+            postTurn(1);
+        }
+        else{
+            const newTurnNum = turnNum + 1;
+            setTurnNum(newTurnNum);
+            postTurn(newTurnNum);
+        }
+    }
+  }, [playerCards])
+
   //to deal card to specific player and update db
   const dealCards = async (player) => {
     try {
@@ -53,13 +72,15 @@ const Game = ({ players }) => {
 
   //to deal initial cards
   const dealCardsToPlayers = async () => {
-    setTurnNum(1);
+    const turnone = 1;
+    setTurnNum(turnone);
     for (const player of players) {
       await dealCards(player);
     }
     for (const player of players) {
       await dealCards(player);
     }
+    postTurn(turnone);
   }
   
   //to start new game and clear db
@@ -90,7 +111,7 @@ const Game = ({ players }) => {
     return (
       <div>
         <Table players={players} playerCards = {playerCards}/>
-        <GameActions turnNum = {turnNum} setTurnNum = {setTurnNum} dealCards = {dealCardsToPlayers} playerCards={playerCards}/>
+        <GameActions turnNum = {turnNum} setTurnNum = {setTurnNum} dealCards = {dealCards} dealCardsToPlayers={dealCardsToPlayers} players={players} playerCards={playerCards}/>
       </div>
     );
   }

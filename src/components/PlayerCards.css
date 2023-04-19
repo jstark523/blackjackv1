@@ -7,3 +7,9 @@
   gap: 10px;
 }
 
+.imgZoom:hover{
+  transform: scale(1.6);
+}
+.imgZoom {
+  transition: transform 0.2s ease-in-out;
+}

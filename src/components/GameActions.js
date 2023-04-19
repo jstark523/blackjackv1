@@ -1,40 +1,38 @@
+import { postTurn } from "../api/axiosConfig"
+import "./GameActions.css"
 
-const HitFunc = () => {
-    return(
-        <>
-        </>
-    )
-}
-
-const StandFunc = (event, turnNum, setTurnNum) => {
-    console.log("entered");
-    if(turnNum === 6){
-        setTurnNum(1);
+const GameActions = ({turnNum, setTurnNum, dealCards, dealCardsToPlayers, players, playerCards}) => {
+    
+    const StandFunc = () => {
+        if(turnNum === 6){
+            setTurnNum(1);
+            postTurn(1);
+        }
+        else{
+            const newTurnNum = turnNum + 1;
+            setTurnNum(newTurnNum);
+            postTurn(newTurnNum);
+        }
     }
-    else{
-        setTurnNum(prevTurnNum => prevTurnNum + 1);
+
+    const HitFunc = () => {
+        dealCards(players[turnNum - 1]);
     }
-}
-
-
-
-
-const GameActions = ({turnNum, setTurnNum, dealCards, playerCards}) => {
+    
     //not dealt
     if(turnNum === 0){
         return (
             <div>
-                <button className="DealButton" onClick={dealCards}>Deal</button>
+                <button className="deal" onClick={dealCardsToPlayers}>DEAL</button>
             </div>
         )
     }
     //not user turn
-    else if(turnNum !== 3){
+    else if(turnNum !== 6){
         return (
             <div>
-                <button className="stand">Stand</button>
-                <button className="hit">Hit</button>
-                <button className="bet">Bet</button>
+                <button className="stand-off">STAND</button>
+                <button className="hit-off">HIT</button>
             </div>
         )
     }
@@ -42,13 +40,8 @@ const GameActions = ({turnNum, setTurnNum, dealCards, playerCards}) => {
     else {
         return(
             <div className="turn">
-                <button className="stand" onClick={(event) => {
-                    console.log("clicked");
-                    StandFunc(event, turnNum ,setTurnNum)}
-                    
-                }>Stand</button>
+                <button className="stand" onClick={StandFunc}>STAND</button>
                 <button className="hit" onClick={HitFunc}>Hit</button>
-                <button className="bet">Bet</button>
             </div>
         )
     }

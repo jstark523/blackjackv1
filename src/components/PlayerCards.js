@@ -6,7 +6,7 @@ const PlayerCards = ({ playerIndex, playerCards }) => {
       return (
         <div id="player-cards">
           {specificPlayerCards.map((cardObj) => (
-            <img key = {cardObj.card.imgPath} src={cardObj.card.imgPath} alt = {""} style={{ borderRadius: 0 }}/>
+            <img className = "imgZoom" key = {cardObj.card.imgPath} src={cardObj.card.imgPath} alt = {""} style={{ borderRadius: 0 }}/>
           ))}
         </div>
       );

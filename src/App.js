@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Game from './components/Game';
 import { getPlayers } from './api/axiosConfig';
+import "./App.css"
 
 const App = () => {
   const [players, setPlayers] = useState([]);
@@ -17,7 +18,9 @@ const App = () => {
 
   return (
     <div>
+      <div className="top-bar"></div>
       <Game players={players}/>
+      <div className="bottom-bar"></div>
     </div>
   );
 }

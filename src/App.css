@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 } */
+
+.top-bar {
+  background-color: black;
+  height: 30px;
+}
+
+.bottom-bar {
+  background-color: black;
+  height: 30px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
