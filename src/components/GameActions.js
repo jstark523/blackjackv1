@@ -45,7 +45,7 @@ const GameActions = ({turnNum, setTurnNum, dealCards, dealCardsToPlayers, player
                             window.alert("PUSH");
                             toggleInGame();
                         }
-                        else{
+                        else if(dealerTotal > userTotal && dealerTotal <= 21){
                             window.alert("Loser.");
                             toggleInGame();
                         }

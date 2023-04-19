@@ -54,9 +54,11 @@ const Game = ({ players }) => {
               toggleInGame();
           }
           else if(turnNum === 5){
-            toggleInGame();
-            window.alert("Winner!");
-          }
+            setTimeout(() => {
+              window.alert("Winner!");
+              toggleInGame();
+          }, 1000);
+        }
           else{
               const newTurnNum = turnNum + 1;
               setTurnNum(newTurnNum);
