@@ -10,6 +10,7 @@ const App = () => {
     getPlayers()
       .then(response => {
         setPlayers(response.data);
+        console.log(players)
       })
       .catch(error => {
         console.error(error);
